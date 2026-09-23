@@ -1,0 +1,30 @@
+@media print {
+  /* Hide interactive controls and top navigation */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Page setup */
+  @page {
+    margin: 10mm 14mm;
+    size: A4 portrait;
+  }
+
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 13pt !important;
+  }
+
+  /* Avoid breaking inside metric cards, chart containers, tables */
+  .print-avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Ensure recharts SVG renders properly */
+  svg {
+    overflow: visible;
+  }
+}
